@@ -31,7 +31,7 @@ main {
   cursor: crosshair;
 }
 
-a:hover {
+.guncss a:hover {
   cursor: crosshair;
 }
 
@@ -43,6 +43,7 @@ a:hover {
   position: absolute;
   display: none;
   animation: explode .2s ease-out;
+  z-index: 6;
 }
 
 @keyframes explode {
