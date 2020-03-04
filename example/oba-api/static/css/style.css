@@ -19,12 +19,6 @@ body {
 
 main {
   padding: 2rem;
-  position: relative;
-  z-index: 5;
-}
-#search {
-  position: relative;
-  z-index: 5;
 }
 
 section {
@@ -81,6 +75,11 @@ section h2 {
   color: black;
 }
 
+main, #search{
+  position: relative;
+  z-index: 5;
+}
+
 article h2 {
   color: #fff;
 }
@@ -90,6 +89,7 @@ section article img {
 }
 
 /* https://codepen.io/davidivanovic22/pen/ZEGevPE */
+/* https://codepen.io/NazarTheVis/pen/zqXMqP */
 
 
 #thumb {

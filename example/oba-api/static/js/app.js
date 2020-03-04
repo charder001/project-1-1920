@@ -36,8 +36,6 @@ submit.addEventListener("click", function setQuery() {
     console.dir(results);
 
     results.forEach((item, i) => {
-
-
       const color = ["book-green", "book-blue", "book-brown", "book-red"];
       const randomColor = color[Math.floor(Math.random() * color.length)];
 
@@ -93,3 +91,4 @@ submit.addEventListener("click", function setQuery() {
 // <img src="${
 // 
 // }">
+
