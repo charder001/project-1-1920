@@ -57,11 +57,10 @@ submit.addEventListener("click", function setQuery() {
 
 
       const html = `
-            <article id="${item.titles[0]}">
       <a href = '#${item.isbn ? item.isbn[0]: '' }' class="${parentTilt}">
              <article class="${randomColor} ${randomTilt}">
               <h2>${item.titles[0]}</h2>
-            </article>
+              </article>
       </a>
           `;
     
@@ -114,6 +113,7 @@ explosion.style.left = x - 25 + "px";
 explosion.addEventListener("animationend", function(){
   explosion.style.display = "none";
 })
+console.log(event.target)
 event.target.remove(event.target);
 }
 
