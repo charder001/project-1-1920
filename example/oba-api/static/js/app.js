@@ -34,13 +34,32 @@ submit.addEventListener("click", function setQuery() {
     console.dir(results);
     results.forEach((item, i) => {
       const html = `
-            <article class="item">
+            <article id="${item.titles[0]}">
               <h2>${item.titles[0]}</h2>
             </article>
           `;
       section.insertAdjacentHTML('beforeend', html);
     });
-  }
+  }  
+})
+
+var gunstate;
+gunToggle = document.getElementById("gun");
+gunToggle.addEventListener("click", function(){
+  gunstate = 1;
+})
+mouseToggle = document.getElementById("mouse");
+mouseToggle.addEventListener("click", function(){
+  gunstate = 0;
+})
+
+bookList = document.querySelector("section")
+
+bookList.addEventListener("click", function(){
+console.log(event.target)
+if (gunstate == 1){
+event.target.parentNode.removeChild(event.target);
+}
 })
 
 // <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
