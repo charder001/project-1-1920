@@ -46,10 +46,12 @@ submit.addEventListener("click", function setQuery() {
 var gunstate;
 gunToggle = document.getElementById("gun");
 gunToggle.addEventListener("click", function(){
+  bookList.classList.toggle("guncss")
   gunstate = 1;
 })
 mouseToggle = document.getElementById("mouse");
 mouseToggle.addEventListener("click", function(){
+
   gunstate = 0;
 })
 
@@ -58,6 +60,15 @@ bookList = document.querySelector("section")
 bookList.addEventListener("click", function(){
 console.log(event.target)
 if (gunstate == 1){
+var x = event.clientX;
+var y = event.clientY;
+var explosion = document.getElementById("explosion")
+explosion.style.display = "block";
+explosion.style.top = y - 25 + "px";
+explosion.style.left = x - 25 + "px";
+explosion.addEventListener("animationend", function(){
+  explosion.style.display = "none";
+})
 event.target.parentNode.removeChild(event.target);
 }
 })

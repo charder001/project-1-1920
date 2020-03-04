@@ -21,6 +21,30 @@ main {
   padding: 2rem;
 }
 
+.guncss:hover {
+  cursor: crosshair;
+}
+
+#explosion {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  animation: explode .2s ease-out;
+}
+
+@keyframes explode {
+  0% {
+transform-origin: center;
+transform: scaleX(0) scaleY(0);
+  }
+  100%{
+    transform-origin: center;
+    transform: scaleX(1) scaleY(1);
+  }
+}
 
 section {
   width: 80%;
