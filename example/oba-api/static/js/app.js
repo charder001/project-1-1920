@@ -75,13 +75,17 @@ submit.addEventListener("click", function setQuery() {
 })
 
 var gunstate = 0;
+var detailed = document.getElementById("detailed")
+var links = document.querySelector("a")
 gunToggle = document.getElementById("gun");
 gunToggle.addEventListener("click", function () {
+  detailed.classList.add("hiddendetailed")
   bookList.classList.add("guncss")
   gunstate = 1;
 })
 mouseToggle = document.getElementById("mouse");
 mouseToggle.addEventListener("click", function () {
+  detailed.classList.remove("hiddendetailed")
   bookList.classList.remove("guncss")
   gunstate = 0;
 })
@@ -96,17 +100,19 @@ bookList.addEventListener("click", function () {
     <img src="../oba-api/static/img/3iCN.gif" alt="myimage" />
     </div>`;
     body.insertAdjacentHTML('afterbegin', explosionHTML)
+    
     var div = document.querySelector(".image-wrapper")
     div.style.left = event.pageX + "px";
     div.style.top = event.pageY + "px";
     setTimeout(function () {
       div.remove()
     }, 1000)
+
     console.log(event.target.tagName)
-      if (event.target.tagName == "ARTICLE")  {
-        event.target.remove(event.target)
-      } else if ( event.target.tagName == "H2") {
-        event.target.parentNode.remove(event.target)
-      }
+    if (event.target.tagName == "ARTICLE") {
+      event.target.remove(event.target)
+    } else if (event.target.tagName == "H2") {
+      event.target.parentNode.remove(event.target)
+    }
   }
 });

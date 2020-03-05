@@ -21,6 +21,7 @@ main {
   display: flex;
 }
 
+
 .guncss:hover {
   cursor: crosshair;
 }
@@ -140,6 +141,11 @@ section article img {
   background-size: cover;
   background-position: center;
   height: 400px;
+  opacity: 100%;
+}
+
+.hiddendetailed {
+  opacity: 0%;
 }
 
 .book-big-tilted,
