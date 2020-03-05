@@ -112,8 +112,9 @@ bookList.addEventListener("click", function () {
       explosion.style.display = "none";
     })
     console.log(event.target)
-    if (event.target == document.querySelector("h2") || document.querySelector("article"))
+    if (event.target != bookList){
     event.target.remove(event.target);
+    }
   }
 
 });
