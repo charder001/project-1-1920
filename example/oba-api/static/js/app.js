@@ -35,8 +35,18 @@ submit.addEventListener("click", function setQuery() {
     results.forEach((item, i) => {
       const color = ["book-green", "book-blue", "book-brown", "book-red"];
       const randomColor = color[Math.floor(Math.random() * color.length)];
+
       const tilt = ["tilt", "no-tilt", "no-tilt", "no-tilt", "no-tilt", "no-tilt", "no-tilt", "no-tilt", "no-tilt"];
       const randomTilt = tilt[Math.floor(Math.random() * tilt.length)];
+
+      let rawTitle = item.titles[0];
+      let header = rawTitle.slice(0, 29);
+      let length = header.length; 
+
+      if (length == 29){
+        header = header + "...";
+      } 
+
       let parentTilt = "";
       if (randomTilt == "no-tilt") {
         parentTilt = "noTilt";
@@ -45,11 +55,12 @@ submit.addEventListener("click", function setQuery() {
       } else {
         parentTilt = "book-tilted";
       }
+
       const html = `
       <a href = '#${item.isbn ? item.isbn[0]: '' }' class="${parentTilt}">
              <article class="${randomColor} ${randomTilt}">
-              <h2>${item.titles[0]}</h2>
-              </article>
+              <h2>${header}</h2>
+            </article>
       </a>
           `;
 

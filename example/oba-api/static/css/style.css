@@ -13,18 +13,12 @@ body {
   margin: 0;
   color: pink;
   background-color: #000;
-  max-width: 80em;
+  max-width: 90em;
   margin: 0 auto;
 }
 
 main {
-  padding: 2rem;
-  position: relative;
-  z-index: 5;
-}
-#search {
-  position: relative;
-  z-index: 5;
+  display: flex;
 }
 
 .guncss:hover {
@@ -49,7 +43,7 @@ main {
 }
 
 section {
-  width: 80%;
+  width: 70%;
   height: 100%;
   margin: 0 auto;
   border: 10px rgba(86, 212, 69, 0.6) solid;
@@ -57,7 +51,6 @@ section {
   overflow: hidden;
   background-image: linear-gradient(#241909, #2c1e0b 220px, limegreen 220px, limegreen 222px, limegreen 222px, limegreen 228px, limegreen 228px, limegreen 230px);
   background-size: 10px 230px;
-  box-shadow: 0px 1000px 0px 400px #7a7668;
 }
 
 section article {
@@ -78,6 +71,10 @@ section h2 {
   transform-origin: 0% 0%;
   transform: rotate(0.25turn) translateY(-35px);
   width: 170px;
+}
+
+.detailed h2 {
+  text-shadow: 2px 2px #000;
 }
 
 .book-green {
@@ -102,6 +99,11 @@ section h2 {
   color: black;
 }
 
+main, #search{
+  position: relative;
+  z-index: 5;
+}
+
 article h2 {
   color: #fff;
 }
@@ -111,18 +113,22 @@ section article img {
 }
 
 /* https://codepen.io/davidivanovic22/pen/ZEGevPE */
+/* https://codepen.io/NazarTheVis/pen/zqXMqP */
 
 
 #thumb {
   height: 250px;
 }
 .detailed {
-	width: 50%;
-	margin: auto;
+	width: 30%;
 	padding: 1em;
 	background-color: lightgrey;
-	color: #000;
-	text-align: center;
+	color: #fff;
+  text-align: center;
+  background: url("../img/trippy.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
 }
 .book-big-tilted,
 .book-tilted {
@@ -166,11 +172,6 @@ article:hover {
 	 background: transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
 	 animation: move-twink-back 200s linear infinite;
 }
- .clouds {
-	 z-index: 2;
-	 background: transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
-	 animation: move-clouds-back 200s linear infinite;
-}
  @keyframes move-twink-back {
 	 from {
 		 background-position: 0 0;
@@ -179,12 +180,3 @@ article:hover {
 		 background-position: -10000px 5000px;
 	}
 }
- @keyframes move-clouds-back {
-	 from {
-		 background-position: 0 0;
-	}
-	 to {
-		 background-position: 10000px 0;
-	}
-}
- 
