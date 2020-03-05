@@ -102,27 +102,21 @@ bookList = document.querySelector("section")
 bookList.addEventListener("click", function () {
   console.log(event.target)
   if (gunstate == 1) {
-    var x = event.clientX;
-    var y = event.clientY;
-    var explosion = document.getElementById("explosion")
-    explosion.style.display = "block";
-    explosion.style.top = y - 25 + "px";
-    explosion.style.left = x - 25 + "px";
-    explosion.addEventListener("animationend", function () {
-      explosion.style.display = "none";
-    })
+    const body = document.querySelector("body")
+    let explosionHTML = `      
+    <div class="image-wrapper">
+    <img src="../oba-api/static/img/3iCN.gif" alt="myimage" />
+    </div>`;
+    body.insertAdjacentHTML('afterbegin', explosionHTML)
+    var div = document.querySelector(".image-wrapper")
+    div.style.left = event.pageX + "px";
+    div.style.top = event.pageY + "px";
+    setTimeout(function(){
+      div.remove()
+    }, 1000)
     console.log(event.target)
-    if (event.target != bookList){
-    event.target.remove(event.target);
+    if (event.target != bookList) {
+      event.target.remove(event.target);
     }
   }
-
 });
-
-
-
-
-// <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
-// <img src="${
-// 
-// }">

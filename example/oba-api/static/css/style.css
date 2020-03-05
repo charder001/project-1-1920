@@ -35,7 +35,20 @@ main {
   cursor: crosshair;
 }
 
-#explosion {
+.image-wrapper {
+	position: absolute;
+	transform: translate(-50%, -50%) scale(.3);
+  opacity: 1;
+  z-index: 7;
+  pointer-events: none;
+}
+
+.image-wrapper.fade-out {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+/* #explosion {
   height: 50px;
   width: 50px;
   background-color: red;
@@ -55,7 +68,7 @@ transform: scaleX(0) scaleY(0);
     transform-origin: center;
     transform: scaleX(1) scaleY(1);
   }
-}
+} */
 
 section {
   width: 80%;
