@@ -30,16 +30,16 @@ main {
 }
 
 .image-wrapper {
-	position: absolute;
-	transform: translate(-50%, -50%) scale(.3);
+  position: absolute;
+  transform: translate(-50%, -50%) scale(.3);
   opacity: 1;
   z-index: 7;
   pointer-events: none;
 }
 
 .image-wrapper.fade-out {
-	opacity: 0;
-	transition: opacity 1s ease-in-out;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 section {
@@ -47,7 +47,7 @@ section {
   height: 100%;
   margin: 0 auto;
   border: 10px rgba(86, 212, 69, 0.6) solid;
-  box-shadow: 0px 0px 15px 0px rgba(86, 212, 69,1);
+  box-shadow: 0px 0px 15px 0px rgba(86, 212, 69, 1);
   overflow: hidden;
   background-image: linear-gradient(#241909, #2c1e0b 220px, limegreen 220px, limegreen 222px, limegreen 222px, limegreen 228px, limegreen 228px, limegreen 230px);
   background-size: 10px 230px;
@@ -82,16 +82,19 @@ section h2 {
   border-left: 2px solid #007800;
   border-right: 2px solid #005000;
 }
-.book-blue{
+
+.book-blue {
   background-color: #0c347d;
   border-left: 2px solid #0e3c90;
   border-right: 2px solid #0a2c6a;
 }
+
 .book-brown {
   background-color: #54290c;
   border-left: 2px solid #66320f;
   border-right: 2px solid #422009;
 }
+
 .book-red {
   background-color: #ff1212;
   border-left: 2px solid #ff8080;
@@ -99,7 +102,8 @@ section h2 {
   color: black;
 }
 
-main, #search{
+main,
+#search {
   position: relative;
   z-index: 5;
 }
@@ -125,17 +129,19 @@ section article img {
 #thumb {
   height: 250px;
 }
+
 .detailed {
-	width: 30%;
-	padding: 1em;
-	background-color: lightgrey;
-	color: #fff;
+  width: 30%;
+  padding: 1em;
+  background-color: lightgrey;
+  color: #fff;
   text-align: center;
   background: url("../img/trippy.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
 }
+
 .book-big-tilted,
 .book-tilted {
   float: left;
@@ -146,43 +152,51 @@ article:hover {
   transform: scale(1.05);
 }
 
-.book-tilted > article {
-  transform: translateY(-3px) translateX(15px) rotate(9deg) ;
-}
-.book-big-tilted > article {
-  transform: translateY(-10px) translateX(15px) rotate(15deg) ;
+.book-tilted>article {
+  transform: translateY(-3px) translateX(15px) rotate(9deg);
 }
 
-.book-tilted:hover > article{
+.book-big-tilted>article {
+  transform: translateY(-10px) translateX(15px) rotate(15deg);
+}
+
+.book-tilted:hover>article {
   transform: unset;
 }
 
 @import "susy";
- @import "compass/reset";
- .stars, .twinkling, .clouds {
-	 position: absolute;
-	 display: block;
-	 top: 0;
-	 bottom: 0;
-	 left: 0;
-	 right: 0;
-	 width: 100%;
-	 height: 100%;
+@import "compass/reset";
+
+.stars,
+.twinkling,
+.clouds {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
- .stars {
-	 z-index: 0;
-	 background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+
+.stars {
+  z-index: 0;
+  background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
 }
- .twinkling {
-	 z-index: 1;
-	 background: transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
-	 animation: move-twink-back 200s linear infinite;
+
+.twinkling {
+  z-index: 1;
+  background: transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
+  animation: move-twink-back 200s linear infinite;
 }
- @keyframes move-twink-back {
-	 from {
-		 background-position: 0 0;
-	}
-	 to {
-		 background-position: -10000px 5000px;
-	}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
 }

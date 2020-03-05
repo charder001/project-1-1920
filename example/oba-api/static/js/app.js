@@ -1,6 +1,5 @@
 var submit = document.getElementById("submit")
 submit.addEventListener("click", function setQuery() {
-
   const details = document.getElementById("detailed");
   const title = document.getElementById("title");
   const section = document.querySelector('section');
@@ -57,9 +56,9 @@ submit.addEventListener("click", function setQuery() {
       }
 
       const html = `
-      <a href = '#${item.isbn ? item.isbn[0]: '' }' class="${parentTilt}">
-             <article class="${randomColor} ${randomTilt}">
-              <h2>${header}</h2>
+      <a href = '#${item.isbn ? item.isbn[0]: '' }' class="${parentTilt} abook">
+             <article class=" articleClass ${randomColor} ${randomTilt}">
+              <h2 class="h2Class">${header}</h2>
             </article>
       </a>
           `;
@@ -75,7 +74,7 @@ submit.addEventListener("click", function setQuery() {
   }
 })
 
-var gunstate;
+var gunstate = 0;
 gunToggle = document.getElementById("gun");
 gunToggle.addEventListener("click", function () {
   bookList.classList.add("guncss")
@@ -103,13 +102,11 @@ bookList.addEventListener("click", function () {
     setTimeout(function () {
       div.remove()
     }, 1000)
-    console.log(event.target)
-    if (event.target != bookList) {
-      if (event.target = document.querySelectorAll("h2")) {
-        event.target.parentNode.remove(event.target);
-      } else if (event.target = document.querySelectorAll("article")) {
+    console.log(event.target.tagName)
+      if (event.target.tagName == "ARTICLE")  {
         event.target.remove(event.target)
+      } else if ( event.target.tagName == "H2") {
+        event.target.parentNode.remove(event.target)
       }
-    }
   }
 });
