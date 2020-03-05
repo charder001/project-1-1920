@@ -23,11 +23,11 @@ main {
 
 
 .guncss:hover {
-  cursor: crosshair;
+  cursor:url(../img/crosshair.png) 32 32, auto;
 }
 
 .guncss a:hover {
-  cursor: crosshair;
+  cursor:url(../img/crosshair.png) 32 32, auto;
 }
 
 .image-wrapper {

@@ -94,6 +94,8 @@ bookList = document.querySelector("section")
 bookList.addEventListener("click", function () {
   console.log(event.target)
   if (gunstate == 1) {
+    var gunAudio = document.getElementById("gunAudio")
+    gunAudio.play();
     const body = document.querySelector("body")
     let explosionHTML = `      
     <div class="image-wrapper">
@@ -119,3 +121,4 @@ bookList.addEventListener("click", function () {
     }
   }
 });
+
