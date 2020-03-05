@@ -41,11 +41,11 @@ submit.addEventListener("click", function setQuery() {
 
       let rawTitle = item.titles[0];
       let header = rawTitle.slice(0, 29);
-      let length = header.length; 
+      let length = header.length;
 
-      if (length == 29){
+      if (length == 29) {
         header = header + "...";
-      } 
+      }
 
       let parentTilt = "";
       if (randomTilt == "no-tilt") {
@@ -105,7 +105,11 @@ bookList.addEventListener("click", function () {
     }, 1000)
     console.log(event.target)
     if (event.target != bookList) {
-      event.target.remove(event.target);
+      if (event.target = document.querySelectorAll("h2")) {
+        event.target.parentNode.remove(event.target);
+      } else if (event.target = document.querySelectorAll("article")) {
+        event.target.remove(event.target)
+      }
     }
   }
 });
