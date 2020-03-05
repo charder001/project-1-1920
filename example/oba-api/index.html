@@ -5,11 +5,13 @@
     <title>Developers</title>
 
     <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <form id ="search" onsubmit="return false">
+      <h1>Waar wil je je werkstuk over maken?</h1> 
       <input type="text" id="userInput">
-      <input id="submit" type="submit">
+      <input id="submit" type="submit" value="Boeken zoeken">
       <!-- <input type="submit" onclick="fetchData()"> -->
     </form>
 <div class="controls">
@@ -25,19 +27,23 @@
         </article> -->
         
       </section>
+      <canvas id="c">
+    </canvas>
+    <div class="detailed" id="detailed">
+      <h2 id="title"></h2>
+      <img id="thumb">
+      <p id="summary"></p>
+     <p><a target="_blank" id="link">Bekijk boek bij OBA</a></p> 
 
-      <div class="detailed" id="detailed">
-        <h2 id="title"></h2>
-        <img id="thumb">
-        
+    </div>
 
-      </div>
     </main>
     <div class="stars"></div>
     <div class="twinkling"></div>
 
 
     <script src="static/js/app.js"></script>
+    <script src="static/js/space.js"></script>
     <script src="static/js/vendor/routie.min.js"></script>
   </body>
 </html>
