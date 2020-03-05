@@ -112,6 +112,12 @@ section article img {
   height: 250px;
 }
 
+.controls {
+  z-index: 10;
+  position: relative;
+  margin: 1em 0;
+}
+
 /* https://codepen.io/davidivanovic22/pen/ZEGevPE */
 /* https://codepen.io/NazarTheVis/pen/zqXMqP */
 
