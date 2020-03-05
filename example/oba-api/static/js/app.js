@@ -100,7 +100,10 @@ bookList.addEventListener("click", function () {
     <img src="../oba-api/static/img/3iCN.gif" alt="myimage" />
     </div>`;
     body.insertAdjacentHTML('afterbegin', explosionHTML)
-    
+    body.classList.add("shake")
+    body.addEventListener("animationend", function(){
+      this.classList.remove("shake")
+    });
     var div = document.querySelector(".image-wrapper")
     div.style.left = event.pageX + "px";
     div.style.top = event.pageY + "px";
