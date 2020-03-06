@@ -177,6 +177,7 @@ section article img {
   min-height: 500px;
   right: 0;
   border: 2px solid #fff;
+  background-color: rgba(0, 0,0,0.8);
 }
 
 .hiddendetailed {
