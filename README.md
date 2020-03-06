@@ -1,6 +1,9 @@
 # Project 1 OBA @cmda-minor-web · 2019-2020
 Rick Chardet - Lars Breuren
 
+![oba2](https://user-images.githubusercontent.com/43436118/76080039-54321680-5fa6-11ea-958d-eec74853136a.PNG)
+
+
 ## De sterrenkast
 De sterrenkast is an interactive bookcase which aims to help young students find inspiration for their school assignment through an enjoyable medium. The user is greeted with a search query field, where they can search for books that might interest them. Once these books have loaded in, the user can view a informative page which contains more about the book. The users also have an option to transform their bookcase into a shooting gallery. Shooting away all the books that don't interest them. This way the user can search and find interesting material in an interactive and fun way.
 
