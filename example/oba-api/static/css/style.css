@@ -51,7 +51,7 @@ section {
   border: 10px rgba(86, 212, 69, 0.6) solid;
   box-shadow: 0px 0px 15px 0px rgba(86, 212, 69, 1);
   overflow: hidden;
-  background-image: linear-gradient(#241909, #2c1e0b 220px, limegreen 220px, limegreen 222px, limegreen 222px, limegreen 228px, limegreen 228px, limegreen 230px);
+  background-image: linear-gradient(limegreen, #000 220px, limegreen 220px, limegreen 222px, limegreen 222px, limegreen 228px, limegreen 228px, limegreen 230px);
   background-size: 10px 230px;
 }
 
@@ -116,6 +116,7 @@ a:link{ color: #fff;}
   background-color: purple !important;
   border-left: 2px solid #ff10ff !important;
   border-right: 2px solid#ff10ff !important;
+  opacity: 0.5;
 }
 
 .detailed a{ opacity: 0;}
@@ -144,10 +145,21 @@ section article img {
 /* https://codepen.io/NazarTheVis/pen/zqXMqP */
 
 #c {
-  background: 
-  #000;
-  width: 30%;
-  min-height: 500px;
+	background: #000;
+	width: 30%;
+	min-height: 500px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+#search{ 
+  z-index: 7;
 }
 
 #thumb {
@@ -157,16 +169,14 @@ section article img {
 .detailed {
   width: 30%;
   padding: 1em;
-  background-color: lightgrey;
   color: #fff;
   text-align: center;
   background-size: cover;
   background-position: center;
-  height: 400px;
   opacity: 100%;
   min-height: 500px;
-  position: absolute;
   right: 0;
+  border: 2px solid #fff;
 }
 
 .hiddendetailed {

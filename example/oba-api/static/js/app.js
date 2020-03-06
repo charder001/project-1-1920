@@ -73,12 +73,12 @@ submit.addEventListener("click", function setQuery() {
 
       const html = `
       <a href = '#${item.isbn ? item.isbn[0]: '' }' class="${parentTilt} abook">
-             <article class=" articleClass ${randomColor} ${randomTilt}">
+             <article class=" articleClass ${randomColor} ${randomTilt} ${status}">
               <h2 class="h2Class">${header}</h2>
             </article>
       </a>
           `;
-          
+
       section.insertAdjacentHTML('beforeend', html);
       routie({
         [item.isbn]: function () {
