@@ -1,7 +1,7 @@
 # Project 1 OBA @cmda-minor-web · 2019-2020
 Rick Chardet - Lars Breuren
 
-![oba2](https://user-images.githubusercontent.com/43436118/76080039-54321680-5fa6-11ea-958d-eec74853136a.PNG)
+![oba2](https://user-images.githubusercontent.com/43436118/76080073-6c099a80-5fa6-11ea-9b75-0b83786fddfa.PNG)
 
 
 ## De sterrenkast
