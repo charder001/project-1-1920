@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Lalezar', cursive;
 }
 
 html {
@@ -11,7 +12,7 @@ body {
   font-size: 1em;
   padding: 0;
   margin: 0;
-  color: pink;
+  color: #fff;
   background-color: #000;
   max-width: 90em;
   margin: 0 auto;
@@ -66,6 +67,10 @@ section article {
   transition: transform 0.4s ease;
 }
 
+
+h2{
+  font-family: Verdana, sans-serif;
+}
 section h2 {
   padding: 0;
   font-size: 1em;
@@ -77,6 +82,9 @@ section h2 {
 .detailed h2 {
   text-shadow: 2px 2px #000;
 }
+.detailed p{ color: #fff;}
+a:visited,
+a:link{ color: #fff;}
 
 .book-green {
   background-color: darkgreen;
@@ -103,8 +111,17 @@ section h2 {
   color: black;
 }
 
-main,
-#search {
+
+.notOk{
+  background-color: purple !important;
+  border-left: 2px solid #ff10ff !important;
+  border-right: 2px solid#ff10ff !important;
+}
+
+.detailed a{ opacity: 0;}
+body .detailed .aVisable{ opacity: 1;}
+
+main, #search{
   position: relative;
   z-index: 5;
 }
@@ -126,6 +143,12 @@ section article img {
 /* https://codepen.io/davidivanovic22/pen/ZEGevPE */
 /* https://codepen.io/NazarTheVis/pen/zqXMqP */
 
+#c {
+  background: 
+  #000;
+  width: 30%;
+  min-height: 500px;
+}
 
 #thumb {
   height: 250px;
@@ -137,11 +160,13 @@ section article img {
   background-color: lightgrey;
   color: #fff;
   text-align: center;
-  background: url("../img/trippy.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
   opacity: 100%;
+  min-height: 500px;
+  position: absolute;
+  right: 0;
 }
 
 .hiddendetailed {

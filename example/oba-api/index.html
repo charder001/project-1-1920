@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Developers</title>
   <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lalezar&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -12,8 +13,9 @@
     <source src="static/Gun.wav" type="audio/wav">
   </audio>
   <form id="search" onsubmit="return false">
+    <h1>Waar wil je je werkstuk over maken?</h1> 
     <input type="text" id="userInput">
-    <input id="submit" type="submit">
+    <input id="submit" type="submit" value="Boeken zoeken">
     <!-- <input type="submit" onclick="fetchData()"> -->
   </form>
   <div class="controls">
@@ -27,19 +29,28 @@
       <!-- <article id="Nice">
           <h2>Nice</h2>
         </article> -->
-
-    </section>
-
+        
+      </section>
+      <canvas id="c">
+    </canvas>
     <div class="detailed" id="detailed">
       <h2 id="title"></h2>
       <img id="thumb">
+      <p id="summary"></p>
+     <p><a target="_blank" id="link">Bekijk boek bij OBA</a></p> 
 
+    </div>
+
+    </main>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
 
     </div>
   </main>
   <div class="stars"></div>
   <div class="twinkling"></div>
   <script src="static/js/app.js"></script>
+  <script src="static/js/space.js"></script>
   <script src="static/js/vendor/routie.min.js"></script>
 </body>
 

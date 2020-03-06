@@ -1,7 +1,15 @@
 var submit = document.getElementById("submit")
+document.getElementById("submit").addEventListener("click", linkVisable); 
+
+function linkVisable(){
+  const element = document.getElementById("link");
+  element.classList.add("aVisable");
+}
+
 submit.addEventListener("click", function setQuery() {
   const details = document.getElementById("detailed");
   const title = document.getElementById("title");
+  const summary = document.getElementById("summary");
   const section = document.querySelector('section');
   const cors = 'https://cors-anywhere.herokuapp.com/';
   const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
@@ -55,6 +63,14 @@ submit.addEventListener("click", function setQuery() {
         parentTilt = "book-tilted";
       }
 
+      let status ="";
+      let isbn = item.isbn;
+      if (isbn[0].includes("(geb.)")){
+        status = "notOk";
+      } else{
+        status = "ok";
+       }
+
       const html = `
       <a href = '#${item.isbn ? item.isbn[0]: '' }' class="${parentTilt} abook">
              <article class=" articleClass ${randomColor} ${randomTilt}">
@@ -62,12 +78,14 @@ submit.addEventListener("click", function setQuery() {
             </article>
       </a>
           `;
-
+          
       section.insertAdjacentHTML('beforeend', html);
       routie({
         [item.isbn]: function () {
           title.innerHTML = item.titles[0];
           document.getElementById("thumb").src = item.coverimages ? item.coverimages[1] : 'Geen foto'
+          summary.innerHTML = item.summaries;
+          document.getElementById("link").href = item.detailLink;
         }
       });
     });
