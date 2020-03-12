@@ -49,6 +49,11 @@ Safari 9.0
 Search function does not work (fetch)
 Everything else seems to work
 
+## Screen reader
+When using the website with windows built in screen reader, it becomes evident that the website is not optimized for such accessibility tools. Images don't have alt text, links don't have names. Tab navigation doesn't work either.
+
+## Fix
+Images need alt text, links need to have meaningful names. Navigation with tabs should be possible by making the HTML more semantic.
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
