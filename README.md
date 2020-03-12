@@ -31,7 +31,7 @@ This app uses the OBA Api to collect the library of books. The API returns a JSO
 - More sauce
 
 ## Browser Technologies
-###iPod Touch
+### iPod Touch
 
 IOS 6.1.6. Safari 8536.25
 Background is slow
