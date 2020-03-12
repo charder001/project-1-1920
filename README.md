@@ -31,17 +31,20 @@ This app uses the OBA Api to collect the library of books. The API returns a JSO
 - More sauce
 
 ## Browser Technologies
-iPod Touch
+###iPod Touch
+
 IOS 6.1.6. Safari 8536.25
 Background is slow
 Crashes after a few seconds
 
-Nexus 5
+### Nexus 5
+
 Android 6.0.1
 Chrome 75
 Slow performer but it works fully
 
-Apple iPad MF432NF/A iOS9.3.5
+### Apple iPad MF432NF/A iOS9.3.5
+
 Safari 9.0
 Search function does not work (fetch)
 Everything else seems to work
